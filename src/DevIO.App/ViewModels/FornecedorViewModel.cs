@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevIO.App.ViewModels
 {
@@ -29,8 +27,7 @@ namespace DevIO.App.ViewModels
         [DisplayName("Ativo?")]
         public bool Ativo { get; set; }
 
-
-        /* EF Relations */
+       
         public IEnumerable<ProdutoViewModel> Produtos { get; set; }
     }
 }
