@@ -1,12 +1,11 @@
 ﻿@model DevIO.App.ViewModels.FornecedorViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Novo fornecedor";
 }
 
-<h1>Create</h1>
+    <h1>@ViewData["Title"]</h1>
 
-<h4>FornecedorViewModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -32,6 +31,11 @@
                     <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
                 </label>
             </div>
+
+            <h4>Endereço</h4>
+            <hr />
+            <partial name="_Endereco" />
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
