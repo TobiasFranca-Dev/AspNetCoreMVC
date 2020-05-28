@@ -121,7 +121,7 @@ namespace DevIO.App.Controllers
 
         public async Task<IActionResult> ObterEndereco(Guid id)
         {
-            var fornecedor = ObterFornecedorEndereco(id);
+            var fornecedor = await ObterFornecedorEndereco(id);
 
             if (fornecedor == null)
             {
