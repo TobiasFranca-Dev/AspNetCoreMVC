@@ -37,7 +37,7 @@ namespace DevIO.Data.Repository
         }
 
         public virtual async Task Adicionar(TEntity entity)
-        {
+        {           
             DbSet.Add(entity);
             await SaveChanges();
         }
@@ -49,8 +49,8 @@ namespace DevIO.Data.Repository
         }
 
         public virtual async Task Remover(Guid id)
-        {
-            DbSet.Update(new TEntity { Id = id });
+        {           
+            DbSet.Remove(new TEntity { Id = id });
             await SaveChanges();
         }
 
