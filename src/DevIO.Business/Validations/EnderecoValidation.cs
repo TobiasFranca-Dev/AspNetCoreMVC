@@ -1,8 +1,5 @@
 ﻿using DevIO.Business.Models;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DevIO.Business.Validations
 {
@@ -20,7 +17,7 @@ namespace DevIO.Business.Validations
 
             RuleFor(c => c.Cep)
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
-                .Length(8).WithMessage("O campo {PropertyName} precisa {MaxLength} caracteres");
+                .Length(8).WithMessage("O campo {PropertyName} precisa ter {MaxLength} caracteres");
 
             RuleFor(c => c.Cidade)
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
